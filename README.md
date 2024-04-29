@@ -5,10 +5,10 @@ In this project you can find an information about how to install your own local 
 
 - Installing mosquitto
 - Configure Firewall
-- Run mosquitto broker
 - Configure mosquitto.conf
+- Run mosquitto broker
 - Install MQTT explorer
-- connect to your MQTT broker
+- Connect to your MQTT broker
 
 ## Installing mosquitto
 
@@ -50,3 +50,29 @@ At the and, we need to give a name to our new rule
 
 ![alt text](image-9.png)
 
+
+## Configure mosquitto.conf
+
+Now we need to configure our mosquitto. To do this, we go to the directory of our mosquitto. Usually, it is located in C:\Program Files\mosquitto
+
+![alt text](image-10.png)
+
+Open the mosquitto.conf file in editor. You can use any editor you want. Now we search for #listener. We have to uncomment it and setup the number of port
+
+![alt text](image-11.png)
+
+Now we need to find #allow_anonimous false, uncomment it and set the value to true
+
+![alt text](image-12.png)
+
+## Run mosquitto broker
+
+After all this simulations, don't forget to save the .config file. After saving it, we can run our mosquitto MQTT broker. Run PowerShell as an administration and type "net start mosquitto"
+
+![alt text](image-14.png)
+
+## Install MQTT explorer
+
+Now you can use any MQTT client to test your mosquitto MQTT broker. In this case we use Mqtt explorer
+
+![alt text](image-15.png)
